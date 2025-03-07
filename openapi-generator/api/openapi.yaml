@@ -31,6 +31,12 @@ paths:
               schema:
                 type: string
           description: あ
+        default:
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Unexpected error
     post:
       requestBody:
         content:
@@ -45,6 +51,12 @@ paths:
               schema:
                 type: string
           description: あ
+        default:
+          content:
+            application/json:
+              schema:
+                type: string
+          description: Unexpected error
 components:
   schemas:
     _example_post_request:

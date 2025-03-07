@@ -32,6 +32,13 @@ paths:
               schema:
                 type: string
                 x-content-type: application/json
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                type: string
+                x-content-type: application/json
     post:
       requestBody:
         content:
@@ -42,6 +49,13 @@ paths:
       responses:
         "200":
           description: あ
+          content:
+            application/json:
+              schema:
+                type: string
+                x-content-type: application/json
+        default:
+          description: Unexpected error
           content:
             application/json:
               schema:

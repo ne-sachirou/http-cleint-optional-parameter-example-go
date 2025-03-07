@@ -306,6 +306,7 @@ type GetExampleResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON200      *string
+	JSONDefault  *string
 }
 
 // Status returns HTTPResponse.Status
@@ -328,6 +329,7 @@ type PostExampleResponse struct {
 	Body         []byte
 	HTTPResponse *http.Response
 	JSON200      *string
+	JSONDefault  *string
 }
 
 // Status returns HTTPResponse.Status
@@ -393,6 +395,13 @@ func ParseGetExampleResponse(rsp *http.Response) (*GetExampleResponse, error) {
 		}
 		response.JSON200 = &dest
 
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && true:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSONDefault = &dest
+
 	}
 
 	return response, nil
@@ -418,6 +427,13 @@ func ParsePostExampleResponse(rsp *http.Response) (*PostExampleResponse, error) 
 			return nil, err
 		}
 		response.JSON200 = &dest
+
+	case strings.Contains(rsp.Header.Get("Content-Type"), "json") && true:
+		var dest string
+		if err := json.Unmarshal(bodyBytes, &dest); err != nil {
+			return nil, err
+		}
+		response.JSONDefault = &dest
 
 	}
 
