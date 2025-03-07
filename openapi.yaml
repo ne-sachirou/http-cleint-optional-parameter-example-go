@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: example
+  version: '1.0'
+
+paths:
+  /example:
+    get:
+      parameters:
+        - name: param1
+          required: true
+          in: query
+          schema:
+            type: integer
+            format: int64
+        - name: param2
+          required: false
+          in: query
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: あ
+          content:
+            application/json:
+              schema:
+                type: string
+    post:
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - param1
+              properties:
+                param1:
+                  type: integer
+                  format: int64
+                param2:
+                  type: integer
+                  format: int64
+      responses:
+        '200':
+          description: あ
+          content:
+            application/json:
+              schema:
+                type: string
