@@ -24,7 +24,7 @@ Optional parameters are passed through a pointer to a DefaultApiExampleGetOpts s
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **param2** | **optional.Int64**|  | 
+ **param2** | **optional.Int64**|  | [default to 42]
 
 ### Return type
 

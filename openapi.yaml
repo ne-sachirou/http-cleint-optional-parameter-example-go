@@ -20,6 +20,7 @@ paths:
           schema:
             type: integer
             format: int64
+            default: 42
       responses:
         "200":
           description: あ
@@ -49,6 +50,7 @@ paths:
                 param2:
                   type: integer
                   format: int64
+                  default: 42
       responses:
         "200":
           description: あ

@@ -76,6 +76,11 @@ func decodeExampleGetParams(args [0]string, argsEscaped bool, r *http.Request) (
 			Err:  err,
 		}
 	}
+	// Set default value for query: param2.
+	{
+		val := int64(42)
+		params.Param2.SetTo(val)
+	}
 	// Decode query: param2.
 	if err := func() error {
 		cfg := uri.QueryParameterDecodingConfig{

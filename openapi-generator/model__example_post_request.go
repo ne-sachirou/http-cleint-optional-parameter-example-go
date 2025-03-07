@@ -34,6 +34,8 @@ type _ExamplePostRequest ExamplePostRequest
 func NewExamplePostRequest(param1 int64) *ExamplePostRequest {
 	this := ExamplePostRequest{}
 	this.Param1 = param1
+	var param2 int64 = 42
+	this.Param2 = &param2
 	return &this
 }
 
@@ -42,6 +44,8 @@ func NewExamplePostRequest(param1 int64) *ExamplePostRequest {
 // but it doesn't guarantee that properties required by API are set
 func NewExamplePostRequestWithDefaults() *ExamplePostRequest {
 	this := ExamplePostRequest{}
+	var param2 int64 = 42
+	this.Param2 = &param2
 	return &this
 }
 

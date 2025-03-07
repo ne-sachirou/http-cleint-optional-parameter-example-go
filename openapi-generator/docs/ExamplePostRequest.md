@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Param1** | **int64** |  | 
-**Param2** | Pointer to **int64** |  | [optional] 
+**Param2** | Pointer to **int64** |  | [optional] [default to 42]
 
 ## Methods
 

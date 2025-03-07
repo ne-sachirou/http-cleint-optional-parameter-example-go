@@ -83,6 +83,9 @@ func (a *DefaultAPIService) ExampleGetExecute(r ApiExampleGetRequest) (string, *
 	parameterAddToHeaderOrQuery(localVarQueryParams, "param1", r.param1, "form", "")
 	if r.param2 != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "param2", r.param2, "form", "")
+	} else {
+		var defaultValue int64 = 42
+		r.param2 = &defaultValue
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -29,7 +29,7 @@ import (
 
 func main() {
 	param1 := int64(789) // int64 | 
-	param2 := int64(789) // int64 |  (optional)
+	param2 := int64(789) // int64 |  (optional) (default to 42)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -55,7 +55,7 @@ Other parameters are passed through a pointer to a apiExampleGetRequest struct v
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **param1** | **int64** |  | 
- **param2** | **int64** |  | 
+ **param2** | **int64** |  | [default to 42]
 
 ### Return type
 
